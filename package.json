@@ -2,6 +2,7 @@
   "name": "shoppinglist",
   "version": "0.0.3",
   "private": true,
+  "homepage": "http://markhamilton90.github.io/react-shopping-list",
   "devDependencies": {
     "concurrently": "6.4.0",
     "react-scripts": "4.0.3"
@@ -9,6 +10,7 @@
   "dependencies": {
     "autoprefixer-stylus": "1.0.0",
     "firebase": "8.10.0",
+    "gh-pages": "^4.0.0",
     "prop-types": "15.7.2",
     "re-base": "4.0.0",
     "react": "17.0.2",
@@ -23,6 +25,8 @@
     "start": "react-scripts start",
     "watch": "concurrently --names \"webpack, stylus\" --prefix name \"npm run start\" \"npm run styles:watch\"",
     "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "eject": "react-scripts eject",
     "styles": "stylus -u autoprefixer-stylus ./src/css/style.styl -o ./src/css/style.css",
     "now-build": "npm run build && mv build dist",
