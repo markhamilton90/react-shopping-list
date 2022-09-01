@@ -9,7 +9,6 @@ class List extends React.Component {
                 {
                     Object.keys(listItems).map( item => (
                         <li key={ item }
-                            draggable="true"
                             className={ listItems[item].completed ? 'completed' : '' }
                             onClick={ () => this.props.toggleItem(item) }>{ listItems[item].title }</li>
                     ))
